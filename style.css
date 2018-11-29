@@ -15,7 +15,6 @@ nav {
   margin: 0 auto;
   max-width: 1300px;
   height: 100%;
-  /* background: grey; */
 }
 
 .navbar_left {
@@ -39,10 +38,6 @@ nav {
   color: black;
 }
 
-.navbar_left {
-  /* background: white; */
-}
-
 .navbar_left img {
   margin-left: 20px;
   height: 40px;
@@ -55,10 +50,15 @@ nav {
 
 .navbar_right {
   float: right;
-  height: 100%;
+  height: 100px;
   line-height: 100px;
   text-align: right;
-  /* background: black; */
+}
+
+.navbar_right .dropdown_link_area {
+  display: inline-block;
+  height: 100px;
+  position: relative;
 }
 
 .navbar_right .navbar_link.selected_language {
@@ -77,4 +77,39 @@ nav {
 .navbar_right .btn_app:hover {
   transition: 0.3s linear;
   background: rgb(193, 43, 124);
+}
+
+.dropdown_menu {
+  position: absolute;
+  top: 100px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: auto;
+  text-align: center;
+  display: none;
+  border:1px solid grey;
+}
+
+.dropdown_menu.active {
+  display: block;
+  padding: 0px 0px;
+}
+
+.dropdown_menu .dropdown_item {
+  text-align: center;
+  padding: 0px 15px;
+  line-height: 50px;
+}
+
+.dropdown_menu .dropdown_item:hover {
+  transition: background 0.3s;
+  background: grey;
+}
+
+.dropdown_menu .dropdown_item .navbar_link {
+   white-space: nowrap;
+}
+
+.dropdown_menu .dropdown_item:hover .navbar_link {
+  color: black;
 }
