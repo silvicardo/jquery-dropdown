@@ -55,7 +55,7 @@ nav {
   text-align: right;
 }
 
-.navbar_right .dropdown_link_area {
+.navbar_right .dropdown_link_area.first_level {
   display: inline-block;
   height: 100px;
   position: relative;
@@ -96,6 +96,7 @@ nav {
 }
 
 .dropdown_menu .dropdown_item {
+  position: relative;
   text-align: center;
   padding: 0px 15px;
   line-height: 50px;
@@ -112,4 +113,26 @@ nav {
 
 .dropdown_menu .dropdown_item:hover .navbar_link {
   color: black;
+}
+
+.dropdown_item.dropdown_link_area.second_level {
+  position: relative
+}
+
+ .dropdown_menu.second_level {
+  position: absolute;
+  top: 0;
+  right:0;
+  transform: translateX(100%);
+  height: auto;
+  text-align: center;
+  display: none;
+  border:1px solid grey;
+  background: white;
+  z-index: 1;
+}
+
+.dropdown_menu.second_level.active {
+  display: block;
+  padding: 0px 0px;
 }

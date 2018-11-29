@@ -2,9 +2,7 @@
 
 console.log('Hello from main.js');
 
-$('.dropdown_link_area').mouseenter(function(){
-
-  console.log('ciao ho cliccato e non so scrivere codice');
+$('.dropdown_link_area.first_level').mouseenter(function(){
 
   $('.dropdown_menu').removeClass('active');
 
@@ -13,7 +11,20 @@ $('.dropdown_link_area').mouseenter(function(){
 });
 
 
-$('.dropdown_link_area').mouseleave(function(){
+$('.dropdown_link_area.first_level').mouseleave(function(){
   $('.dropdown_menu').removeClass('active');
 }
-)
+);
+
+$('.dropdown_link_area.second_level').mouseenter(function(){
+
+  $('.dropdown_menu.second_level').removeClass('active');
+
+  $(this).children('.dropdown_menu.second_level').addClass('active');
+
+});
+
+$('.dropdown_link_area.second_level').mouseleave(function(){
+  $('.dropdown_menu.second_level').removeClass('active');
+}
+);
