@@ -12,6 +12,69 @@ nav {
 }
 
 .content_area {
-  max-width: 1200px;
+  margin: 0 auto;
+  max-width: 1300px;
   height: 100%;
+  /* background: grey; */
+}
+
+.navbar_left {
+  float: left;
+  line-height: 100px;
+}
+
+.navbar_link {
+  margin: 0px 20px;
+  text-decoration: none;
+  text-transform: capitalize;
+  cursor: pointer;
+  color: grey;
+}
+
+.navbar_link .fa-chevron-down {
+  margin-left: 10px;
+}
+
+.navbar_link:hover {
+  color: black;
+}
+
+.navbar_left {
+  /* background: white; */
+}
+
+.navbar_left img {
+  margin-left: 20px;
+  height: 40px;
+  vertical-align: middle;
+}
+
+.navbar_left a.navbar_link {
+  text-transform: uppercase;
+}
+
+.navbar_right {
+  float: right;
+  height: 100%;
+  line-height: 100px;
+  text-align: right;
+  /* background: black; */
+}
+
+.navbar_right .navbar_link.selected_language {
+  text-transform: uppercase;
+}
+
+.navbar_right .btn_app {
+  padding: 15px 20px;
+  color: white;
+  border-radius: 25px;
+  font-size: 18px;
+  font-weight: bold;
+  background: rgb(216, 50, 139);
+}
+
+.navbar_right .btn_app:hover {
+  transition: 0.3s linear;
+  background: rgb(193, 43, 124);
 }
